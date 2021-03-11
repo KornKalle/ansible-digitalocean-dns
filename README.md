@@ -19,6 +19,7 @@ Dependencies
 ------------
 
 - community.digitalocean
+- kornkalle.ansible_digitalocean_dns
 
 Example Playbook
 ----------------
