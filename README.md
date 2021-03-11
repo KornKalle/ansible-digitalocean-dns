@@ -31,8 +31,8 @@ Example Playbook
 Development
 -------
 
-Feel free to contribute and improve this role, you are welcome! 
-The setup is quite standard, tests are only run locally with molecule as I didn't check for a possibility to test Digitalocean API interactions against some sort of dev/test API.
+Feel free to contribute and improve this role, you are welcome!  
+The setup is quite standard, tests are only run locally with molecule as I didn't check for a possibility to test Digitalocean API interactions against some sort of dev/test API.  
 CI / CD Improvements are very welcome, too.
 
 License
