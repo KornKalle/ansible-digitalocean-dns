@@ -1,0 +1,49 @@
+# Authentication
+# Insert a valid digitalocean API Key with write permissions here
+do_oauth_token: ""
+
+# DNS
+# This is a multidimensional array, please follow the commented examples, all properties except 'priority' are mandatory
+do_dns_domains: []
+
+#  - domain: example.org
+#    state: present
+     # this is the ip for the default '@' domain, which is required by community.digitalocean.digital_ocean_domain module
+#    default_ip: 1.1.1.1
+#    entries:
+#      - name: host
+#        data: 10.0.0.2
+#        state: present
+#        type: A
+#        ttl: 3600
+#      - name: legacy-host
+#        data: 10.0.0.3
+#        state: absent
+#        type: A
+#        ttl: 3600
+#      - name: mail
+#        data: 10.0.0.254
+#        state: present
+#        type: MX
+#        ttl: 3600
+#        priority: 10
+#   - domain: mydomain.com
+#     state: present
+#     entries:
+#      - name: web
+#        data: 10.20.0.2
+#        state: present
+#        type: A
+#        ttl: 3600
+#      - name: default._domainkey
+#        data: v=DKIM1; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDE1sCUxuv29Krtv+7ugCXcC1mzGwJA0a19zdzvzVeknGMvA5ZzOtDVs1OvsLnoRpvXg2F6mRMQtPqwSqg1e4qRxuVG9zBlwgfY8b97Wc9Wn8vaKKYus59vUD8tKx6+fgJHZXiV33EG8N6vavSccAExR2VOhTC7H/p+YFWr3p1KHwIDAQAB;
+#        type: TXT
+#        ttl: 86400
+#      - name: '@'
+#        data: ns3.digitalocean.com.
+#        state: present
+#        type: NS
+#        ttl: 86400
+
+# This will print out a lot of additional information for better error analysis
+debug: no

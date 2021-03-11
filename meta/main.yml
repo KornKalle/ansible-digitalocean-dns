@@ -1,0 +1,21 @@
+galaxy_info:
+  author: Nils Berg
+  description: Infrastructure Architect
+  license: GPL-3.0-only
+  min_ansible_version: 2.9
+  platforms:
+   - name: Fedora
+     versions:
+       - all
+   - name: Ubuntu
+     versions:
+       - all
+   - name: Debian
+     versions:
+       - all
+  galaxy_tags:
+    - digitalocean
+    - dns
+  dependencies:
+    - community.digitalocean collection
+

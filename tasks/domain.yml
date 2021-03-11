@@ -1,0 +1,31 @@
+---
+# Create Domain in Digitalocean Account
+- name: Create Domain in Digitalocean
+  community.digitalocean.digital_ocean_domain:
+    state: "{{ item.state }}"
+    name: "{{ item.domain }}"
+    oauth_token: "{{ do_oauth_token }}"
+    ip: "{{ item.default_ip }}"
+
+# Get All stored domain records for this domain
+- name: fetch existing entries for domain
+  uri:
+    url: "https://api.digitalocean.com/v2/domains/{{ item.domain }}/records"
+    headers:
+      accept: application/json
+      authorization: Bearer {{ do_oauth_token }}
+    return_content: yes
+  register: domain_records_response
+
+- name: Print REST Response for {{ item.domain }}
+  debug:
+    msg: "{{ domain_records_response }}"
+  when: debug
+
+# Create / Update / Delete records
+- include_tasks: record.yml
+  with_items: "{{ item.entries }}"
+  loop_control:
+    loop_var: entry
+    # Add pause as we are too fast for DO API
+    pause: 1

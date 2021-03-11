@@ -1,0 +1,5 @@
+.idea/
+
+# development
+.vaultpassword
+molecule/default/test-vars.yml

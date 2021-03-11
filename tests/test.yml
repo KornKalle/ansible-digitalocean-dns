@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  roles:
+    - ../ansible-digitalocean-dns
+  vars_files: ../defaults/main.yml

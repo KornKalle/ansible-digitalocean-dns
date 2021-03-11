@@ -1,0 +1,4 @@
+---
+- name: Manage Digitalocean DNS entries
+  include_tasks: domain.yml
+  with_items: "{{ do_dns_domains }}"
