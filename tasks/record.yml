@@ -6,4 +6,4 @@
     type: "{{ entry.type | default('A')}}"
     name: "{{ entry.name }}"
     data: "{{ entry.data }}"
-    ttl: "{{ entry.ttl | default(300)}}"
+    ttl: 300
